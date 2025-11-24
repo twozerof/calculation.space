@@ -42,6 +42,16 @@ a {
 }
 .header_nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header_nav>a {
+  color: var(--c-color);
+  text-transform: uppercase;
+
+}
+.header_nav_logo {
+  display: flex;
   position: relative;
   align-items: center;
   font-family: "Ubuntu", sans-serif;
@@ -51,9 +61,6 @@ a {
   width: min-content;
   height: 3.7rem;
   padding: 15px;
-}
-.header_nav_logo {
-
 }
 .content {
   display: flex;
