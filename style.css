@@ -156,3 +156,162 @@ p {
   text-align: center;
   margin-block: 2.5rem;
 }
+
+.form-group {
+  margin-bottom: .8rem;
+}
+/* Стили для формы */
+form {
+    background: var(--c-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+fieldset {
+    border: 1px solid var(--g-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Стили для селекта */
+select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--g-color);
+    border-radius: 8px;
+    background-color: var(--c-color);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--d-color);
+    /*margin-bottom: 1rem;*/
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23366da1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+select:focus {
+    outline: none;
+    border-color: var(--b-color);
+    box-shadow: 0 0 0 3px rgba(54, 109, 161, 0.1);
+}
+
+/* Стили для радиокнопок */
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    /*margin: 1.5rem 0;*/
+    flex-wrap: wrap;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid var(--g-color);
+    border-radius: 8px;
+    background: var(--c-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 400;
+    color: var(--d-color);
+}
+
+input[type="radio"]:checked + label {
+    background: var(--b-color);
+    color: var(--c-color);
+    border-color: var(--b-color);
+}
+
+input[type="radio"] + label:hover {
+    border-color: var(--b-color);
+    transform: translateY(-2px);
+}
+
+/* Стили для числовых полей ввода */
+input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--g-color);
+    border-radius: 8px;
+    background-color: var(--c-color);
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    color: var(--d-color);
+    /*margin-bottom: 1rem;*/
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+input[type="number"]:focus {
+    outline: none;
+    border-color: var(--b-color);
+    box-shadow: 0 0 0 3px rgba(54, 109, 161, 0.1);
+}
+
+/* Стили для меток */
+label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-weight: 400;
+    color: var(--b-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--b-color);
+    color: var(--c-color);
+    border: none;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    /*background: var(--a-color);*/
+    color: var(--e-color);
+    transform: translateY(-2px);
+    /*box-shadow: 0 4px 12px rgba(254, 64, 64, 0.3);*/
+}
+
+button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+    
+    fieldset {
+        padding: 1rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    input[type="radio"] + label {
+        justify-content: center;
+    }
+}
