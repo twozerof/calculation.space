@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/normalize.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <title>Подборка калькуляторов</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container_lg">
+      <nav class="header_nav">
+        <div class="header_nav_logo"><a href="/">calculation.<span>space</span></a>калькуляторы для технических расчётов</div>
+      </nav>
+    </div>
+  </header>
+  <div class="content container_lg">
+<?php require_once "components/aside.php" ?>
+    <main class="main container">
+    <?= $content ?>
+    </main>
+  </div>
+  <footer class="footer">
+    <div class="container_lg">
+      <nav class="footer_nav">
+        <div>
+          <h3>О сайте</h3>
+          <p>
+            Ресурс предназначен для расчёта
+          </p>
+        </div>
+        <div>
+          <h3>Расчёты КИПиА</h3>
+          <ul class="footer_nav_list">
+            <li><a href="">Термосопротивления</a></li>
+            <li><a href="">Термопары</a></li>
+            <li><a href="">Терморезисторы NTC</a></li>
+            <li><a href="">Преобразователи ПМТ</a></li>
+            <li><a href="">Шкала-сигнал</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Вес металлопроката</h3>
+          <ul class="footer_nav_list">
+            <li><a href="">Уголок</a></li>
+            <li><a href="">Швеллер</a></li>
+            <li><a href="">Круглая труба</a></li>
+            <li><a href="">Проволока</a></li>
+            <li><a href="">Круг</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="copy">&copy; <a href="/">calculation.space</a> - технические калькуляторы</div>
+    </div>
+  </footer>
+</body>
+</html>

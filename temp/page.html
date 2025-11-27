@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="thermocouples.css">
   <title>Подборка калькуляторов</title>
 </head>
 <body>
@@ -40,7 +41,7 @@
       <article class="main_article">
         <h1 class="main_article_title">Калькулятор термопар</h1>
         <div class="">
-<form>
+<form id="thermocouple-calculator">
     <fieldset>
         <div class="form-group">
             <label for="type-tc">Тип термопары</label>
@@ -86,6 +87,10 @@
     
     <button type="submit" name="ok">Рассчитать</button>
 </form>
+<div id="calculation-result" style="display: none; margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px; border-left: 4px solid #007bff;">
+    <h4>Результат расчёта:</h4>
+    <p id="result-value" style="font-size: 1.2em; font-weight: bold; margin: 0;"></p>
+</div>
         </div>
         <section>
           <h2 class="section_title">Как пользоваться?</h2>
@@ -128,5 +133,6 @@
       <div class="copy">&copy; <a href="/">calculation.space</a> - технические калькуляторы</div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

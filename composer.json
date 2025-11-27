@@ -1,0 +1,19 @@
+{
+    "name": "a/a",
+    "description": "a",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Models\\": "models/",
+            "Controllers\\": "controllers/",
+            "Classes\\": "classes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "a"
+        }
+    ],
+    "require": {
+    }
+}
