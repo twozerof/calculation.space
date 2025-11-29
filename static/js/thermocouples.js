@@ -64,10 +64,6 @@ radioButtons.forEach(radio => {
         }
         
         try {
-            // Показываем индикатор загрузки
-            this.showLoading();
-            
-            // Отправляем запрос на сервер
             const response = await fetch('/thermocouple_calculator/handler', {
                 method: 'POST',
                 headers: {
@@ -105,32 +101,30 @@ radioButtons.forEach(radio => {
         return true;
     }
     
-    showLoading() {
-        this.resultBlock.style.display = 'block';
-        this.resultBlock.style.borderLeftColor = '#ffc107';
-        this.resultValue.innerHTML = '<span style="color: #666;">Выполняется расчёт...</span>';
-    }
-    
     showResult(result) {
         this.resultBlock.style.display = 'block';
-        this.resultBlock.style.borderLeftColor = '#28a745';
-        
         // Форматируем результат в зависимости от направления расчёта
         const convertDirection = document.querySelector('input[name="convert"]:checked').value;
         
         if (convertDirection === '0') {
             // температура → термо-ЭДС
-            this.resultValue.innerHTML = `Термо-ЭДС: <span style="color: #dc3545;">${result.emf} mV</span>`;
+            
+            this.resultValue.innerHTML = `<div class="content-item"><span>Термо-ЭДС</span><span class="space"></span><span>${result.emf} мВ</span></div>
+                                        <div class="content-item"><span>Заданная температура</span><span class="space"></span><span>${result.temperature} °C</span></div>
+                                        <div class="content-item">${result.delta}</div>
+                                        `;
         } else {
             // термо-ЭДС → температура
-            this.resultValue.innerHTML = `Температура: <span style="color: #dc3545;">${result.temperature} °C</span>`;
+            this.resultValue.innerHTML = `<div class="content-item"><span>Температура</span><span class="space"></span><span>${result.temperature} °C</span></div>
+                                        <div class="content-item"><span>Термо-ЭДС</span><span class="space"></span><span>${result.emf} мВ</span></div>
+                                        <div class="content-item">${result.delta}</div>
+                                        `;
         }
     }
     
     showError(message) {
         this.resultBlock.style.display = 'block';
-        this.resultBlock.style.borderLeftColor = '#dc3545';
-        this.resultValue.innerHTML = `<span style="color: #dc3545;">${message}</span>`;
+        this.resultValue.innerHTML = `<span style="color: var(--a-color);font-weight:bold;">${message}</span>`;
     }
     
     hideResult() {

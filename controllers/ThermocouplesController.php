@@ -51,7 +51,6 @@ class ThermocouplesController
                         'emf' => $value,
                         'temperature' => round($temperature, 1),
                         'type' => $polinom['type']['type'],
-                        'message' => 'Расчёт выполнен успешно'
                     ];
                 } else {
                     $err[] = "Вне диапазона";
@@ -73,11 +72,25 @@ class ThermocouplesController
                         'emf' => round($emf, 4),
                         'temperature' => $value,
                         'type' => $polinom['type']['type'],
-                        'message' => 'Расчёт выполнен успешно'
                     ];
                 } else {
                     $err[] = "Вне диапазона";
                 }
+            }
+            if(is_array($delta))
+            {
+                $html = '<table><thead><tr><th>Класс допуска</th><th>Допускаемое отклонение</th></tr></thead>';
+                foreach($delta as $k => $item)
+                {
+                    $item = round($item, 2);
+                    $html .= "<tr><td>$k</td><td>$item °C</td></tr>";
+                }
+                $html .= '</table>';
+                $result['delta'] = $html;
+            }
+            else
+            {
+                $result['delta'] = '';
             }
             echo json_encode($result, JSON_UNESCAPED_UNICODE);
         } elseif (isset($input['ok'])) {

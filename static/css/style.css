@@ -8,6 +8,7 @@
   --d-color: #0c0c0c;
   --e-color: #c8ffa1;
   --g-color: #87a4be;
+  --f-color: #e8eff8;
 }
 
 body {
@@ -160,6 +161,10 @@ p {
 .form-group {
   margin-bottom: .8rem;
 }
+.calculator {
+  display: flex;
+  flex-direction: column;
+}
 /* Стили для формы */
 form {
     background: var(--c-color);
@@ -167,6 +172,7 @@ form {
     border-radius: 12px;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
+    flex: 1;
 }
 
 fieldset {
@@ -225,6 +231,7 @@ input[type="radio"] + label {
     transition: all 0.3s ease;
     font-weight: 400;
     color: var(--d-color);
+    flex: 1;
 }
 
 input[type="radio"]:checked + label {
@@ -259,7 +266,7 @@ input[type="number"]:focus {
 }
 
 /* Стили для меток */
-label {
+label, .form-group>span {
     display: block;
     margin-bottom: 0.2rem;
     font-weight: 400;
@@ -314,4 +321,42 @@ button[type="submit"]:active {
     input[type="radio"] + label {
         justify-content: center;
     }
+}
+.results {
+  color: var(--b-color);
+  padding: 1.5rem;
+  background-color: var(--f-color);
+  border-radius: 12px;
+}
+.results>h3 {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.content-item {
+  display: flex;
+  justify-content: space-between; /* Распределяет пространство между пунктом и номером */
+  align-items: baseline; /* Выравнивает пункты и номера по одной линии */
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
+.space {
+  content: ""; /* Создает пустой псевдоэлемент */
+  border-bottom: 1px dashed var(--b-color); /* Создает пунктирную линию */
+  margin-left: 5px; /* Отступ от пункта */
+  flex-grow: 1; /* Позволяет псевдоэлементу занимать все доступное пространство */
+}
+table{
+  white-space: wrap;
+  table-layout: fixed;
+  flex: 1;
+  border-collapse: collapse;
+  border: 1px solid var(--b-color);
+  margin-top: .8rem;
+}
+td, th{
+  padding: 5px;
+  border: 1px solid var(--b-color);
+  text-align: center;
 }

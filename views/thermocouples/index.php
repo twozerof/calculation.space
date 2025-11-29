@@ -1,7 +1,7 @@
 <?php ob_start() ?>
       <article class="main_article">
         <h1 class="main_article_title">Калькулятор термопар</h1>
-        <div class="">
+        <div class="calculator">
           <form id="thermocouple-calculator">
             <fieldset>
               <div class="form-group">
@@ -13,7 +13,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <label>Направление расчёта</label>
+                <span>Направление расчёта</span>
                 <div class="radio-group">
                   <input type="radio" data-placeholder="Температура, °C" class="btn-check" name="convert" id="vbtn-radio1" autocomplete="off" value="0" checked>
                   <label for="vbtn-radio1"><strong>температура → термо-ЭДС</strong></label>
@@ -32,13 +32,12 @@
             </fieldset>
             <!--<button type="submit" name="ok">Рассчитать</button>-->
           </form>
-          <div id="calculation-result" style="display: none; margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 5px; border-left: 4px solid #007bff;">
-            <h4>Результат расчёта:</h4>
-            <p id="result-value" style="font-size: 1.2em; font-weight: bold; margin: 0;"></p>
+          <div class="results" id="calculation-result">
+            <div id="result-value"></div>
           </div>
         </div>
         <section>
-          <h2 class="section_title">Как пользоваться?</h2>
+          <!--<h2 class="section_title">Как пользоваться?</h2>-->
           <p></p>
         </section>
       </article>
