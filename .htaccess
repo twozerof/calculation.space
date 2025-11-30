@@ -1,6 +1,7 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-
 RewriteRule ^thermocouple_calculator$ ?page=thermocouples&action=index [L,QSA]
 RewriteRule ^thermocouple_calculator/handler$ ?page=thermocouples&action=handler [L,QSA]
+RewriteRule ^resistance_temperature_detector_calculator$ ?page=resistance_temperature_detector&action=index [L,QSA]
+RewriteRule ^resistance_temperature_detector_calculator/handler$ ?page=resistance_temperature_detector&action=handler [L,QSA]
 </IfModule>

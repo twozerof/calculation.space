@@ -1,5 +1,6 @@
 <?php
 
+use Controllers\ResistanceTemperatureDetectorController;
 use Controllers\MainController;
 use Controllers\ThermocouplesController;
 
@@ -16,6 +17,18 @@ class Router{
                 break;
             case 'thermocouples':
                 $controller = new ThermocouplesController();
+                switch($action)
+                {
+                    case 'index':
+                        $controller->index();
+                        break;
+                    case 'handler':
+                        $controller->handler();
+                        break;
+                }
+                break;
+            case 'resistance_temperature_detector':
+                $controller = new ResistanceTemperatureDetectorController;
                 switch($action)
                 {
                     case 'index':
