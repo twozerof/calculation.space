@@ -21,6 +21,7 @@ body {
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+  margin-bottom: 0;
 }
 ul {
   list-style: none;
@@ -30,15 +31,10 @@ a {
   text-decoration: none;
   color: var(--d-color);
 }
-.container_lg {
+.container {
   max-width: 1400px;
   padding-inline: 40px;
   margin: 0 auto;
-}
-.container {
-  max-width: 966px;
-  padding: 25px 40px;
-  background-color: var(--c-color);
 }
 .header, .footer {
   background-color: var(--b-color);
@@ -179,7 +175,6 @@ fieldset {
     border: 1px solid var(--g-color);
     border-radius: 8px;
     padding: 1.5rem;
-    margin-bottom: 1.5rem;
     background: rgba(255, 255, 255, 0.5);
 }
 
@@ -303,25 +298,6 @@ button[type="submit"]:hover {
 button[type="submit"]:active {
     transform: translateY(0);
 }
-
-/* Адаптивность для мобильных */
-@media (max-width: 768px) {
-    form {
-        padding: 1rem;
-    }
-    
-    fieldset {
-        padding: 1rem;
-    }
-    
-    .radio-group {
-        flex-direction: column;
-    }
-    
-    input[type="radio"] + label {
-        justify-content: center;
-    }
-}
 .results {
   color: var(--b-color);
   padding: 1.5rem;
@@ -359,4 +335,55 @@ td, th{
   padding: 5px;
   border: 1px solid var(--b-color);
   text-align: center;
+}
+/* Адаптивность для мобильных */
+/*@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+    
+    fieldset {
+        padding: 1rem;
+    }
+    
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    input[type="radio"] + label {
+        justify-content: center;
+    }
+}*/
+
+@media (max-width: 992px) {
+  .content, .footer_nav {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+    form {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .results {
+      padding: 1rem
+    }
+    .content-item {
+      font-size: 1rem;
+    }
+    fieldset {
+        padding: 1rem;
+    }
+    .radio-group {
+        flex-direction: column;
+    }
+    
+    input[type="radio"] + label {
+        justify-content: center;
+    }
+    .container {
+      padding-inline: 5px;
+    }
+    h1 {
+      margin-bottom: 0;
+    }
 }

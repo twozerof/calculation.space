@@ -93,6 +93,7 @@ class ThermocouplesController
                 $result['delta'] = '';
             }
             echo json_encode($result, JSON_UNESCAPED_UNICODE);
+            die;
         } elseif (isset($input['ok'])) {
             $err[] = "Одно или несколько полей заполнено некорректно";
         }

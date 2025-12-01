@@ -4,7 +4,7 @@ echo '
       <nav class="aside_nav">
         <h3>Расчёты КИПиА</h3>
         <ul class="aside_nav_list">
-          <li><a href="">Термосопротивления</a></li>
+          <li><a href="resistance_temperature_detector_calculator">Термосопротивления</a></li>
           <li><a href="thermocouple_calculator">Термопары</a></li>
           <li><a href="">Терморезисторы NTC</a></li>
           <li><a href="">Преобразователи ПМТ</a></li>

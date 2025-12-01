@@ -9,20 +9,20 @@
 </head>
 <body>
   <header class="header">
-    <div class="container_lg">
+    <div class="container">
       <nav class="header_nav">
         <div class="header_nav_logo"><a href="/">calculation.<span>space</span></a>калькуляторы для технических расчётов</div>
       </nav>
     </div>
   </header>
-  <div class="content container_lg">
+  <div class="content container">
 <?php require_once "components/aside.php" ?>
     <main class="main container">
     <?= $content ?>
     </main>
   </div>
   <footer class="footer">
-    <div class="container_lg">
+    <div class="container">
       <nav class="footer_nav">
         <div>
           <h3>О сайте</h3>
