@@ -210,7 +210,11 @@ select:focus {
     /*margin: 1.5rem 0;*/
     flex-wrap: wrap;
 }
-
+.input-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
 input[type="radio"] {
     display: none;
 }

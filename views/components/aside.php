@@ -6,7 +6,7 @@ echo '
         <ul class="aside_nav_list">
           <li><a href="resistance_temperature_detector_calculator">Термосопротивления</a></li>
           <li><a href="thermocouple_calculator">Термопары</a></li>
-          <li><a href="">Терморезисторы NTC</a></li>
+          <li><a href="ntc_thermistor_calculator">Терморезисторы NTC</a></li>
           <li><a href="">Преобразователи ПМТ</a></li>
           <li><a href="">Шкала-сигнал</a></li>
         </ul>
